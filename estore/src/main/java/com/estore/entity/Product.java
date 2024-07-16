@@ -16,6 +16,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.NotBlank;
@@ -27,32 +28,40 @@ public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	Integer id;
+	
 	@NotBlank(message = "Không được để trống tên sản phẩm")
 	String name;
 
 	@NotBlank(message = "Không được để trống định lượng sản phẩm")
 	String unitBrief;
-	@NotBlank(message = "Không được để trống giá bán")
+	
+	@NotNull(message = "Không được để trống giá bán")
 	@Min(value = 0, message = "Giá bán phải > 0")
 	Double unitPrice;
+	
 	String image;
-	@NotBlank(message = "Không được để trống ngày")
+	
+	@NotNull(message = "Không được để trống ngày")
 	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern = "MM/dd/yyyy")
 	Date productDate;
+
+	Boolean special;
+	Boolean latest;
 	Boolean available;
+	
 	String description;
 	// Integer categoryId;
 	// String supplierId;
-	@NotBlank(message = "Không được để trống số lượng")
+	@NotNull(message = "Không được để trống số lượng")
 	@Min(value = 0, message = "Số lượng phải > 0")
 	Integer quantity;
-	@NotBlank(message = "Không được để trống discount")
+	
+	@NotNull(message = "Không được để trống discount")
 	@Min(value = 0, message = "Discount phải > 0")
 	Double discount;
-	Boolean special;
-	Boolean latest;
-	@NotBlank(message = "Không được để trống lượt xem")
+	
+	@NotNull(message = "Không được để trống lượt xem")
 	@Min(value = 0, message = "Lượt xem phải >= 0")
 	Integer views;
 

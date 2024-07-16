@@ -10,7 +10,7 @@
 						<li><b id="cart-cnt">${cart.count}</b> mặt hàng </li>
 						<li><b id="cart-amt">
 								<f:formatNumber value="${cart.amount}" pattern="#,###.00" />
-							</b> VNĐ </li>
+							</b> USD </li>
 						<li>
 							<a href="/cart/view">Xem giỏ hàng</a>
 						</li>
