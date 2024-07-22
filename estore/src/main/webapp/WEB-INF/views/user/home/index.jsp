@@ -14,19 +14,21 @@
 
 		<style>
 			.mi-slider {
-				height: 300px;
+				height: 350px;
 			}
 			.mi-slider ul li img {
 				height: 120px;
 			}
 		</style>
+		
 		<script type="text/javascript">
 			$(function () {
 
 				$('#mi-slider').catslider();
 			});
 		</script>
-		<h2>TRANG CHỦ</h2>
+		
+		<h3>Trang Chủ</h3>
 		<!--Slide show-->
 		<div class="mi-slider">
 			<div id="mi-slider" class="mi-slider">
@@ -35,8 +37,9 @@
 						<c:forEach var="p" items="${c.products}">
 							<li>
 								<a href="/product/detail/${p.id}">
-									<img src="/static/images/products/${p.image}" alt="img01">
+									<img src="/static/images/products/${p.image}">
 									<h4>${p.name}</h4>
+									<br>
 									<h4>${p.unitPrice}</h4>
 								</a>
 							</li>
@@ -50,6 +53,3 @@
 				</nav>
 			</div>
 		</div>
-
-		<!--Specials-->
-		<%-- <jsp:include page="../product/list.jsp" /> --%>

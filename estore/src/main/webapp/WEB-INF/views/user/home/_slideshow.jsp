@@ -29,7 +29,7 @@
 		<body>
 			<!--Slide show-->
 			<div class="mi-slider">
-				<!-- 	hiện danh sách 5 sản phẩm -->
+				<!-- 	hiện danh sách 4 sản phẩm -->
 				<c:forEach items="${cates}" var="c">
 					<ul>
 						<c:forEach items="${list}" var="p">

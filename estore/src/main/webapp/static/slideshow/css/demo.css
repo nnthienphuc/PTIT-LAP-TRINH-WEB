@@ -13,10 +13,9 @@ html { height: 100%; }
 	margin: 0;
 }
 
-/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
 .clearfix:before,
 .clearfix:after {
-    content: " ";
+    content: "";
     display: table;
 }
 
@@ -25,7 +24,7 @@ html { height: 100%; }
 }
 
 .clearfix {
-    *zoom: 1;
+    overflow: hidden;
 }
 
 body {
@@ -44,14 +43,13 @@ a {
 }
 
 .container {
-	width: 100%;
+	width: 63%;
 	position: relative;
 }
 
 .main {
 	padding-bottom: 80px;
 }
-
 
 .mi-slider {
 	position: relative;
@@ -124,7 +122,7 @@ a {
 
 .mi-slider nav {
 	position: relative;
-	top: 400px;
+	top: 300px;
 	text-align: center;
 	max-width: 800px;
 	margin: 0 auto;
@@ -378,12 +376,6 @@ a {
 	}
 }
 
-
-/*Thats all. I hope you enjoyed it.
-Thanks :)*/
-/***************************************************************/
-/*************** Footer Bar Style ******************************/
-/***************************************************************/
 .footer-bar
 {
     display: block;

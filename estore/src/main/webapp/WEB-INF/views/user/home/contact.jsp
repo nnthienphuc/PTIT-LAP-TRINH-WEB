@@ -12,14 +12,15 @@
 			<div class="span9">
 				<div class="span4">
 					<h4>Địa Chỉ Liên Hệ</h4>
-					<p>
-						Số 97 Man Thiện, phường Hiệp Phú, Thủ Đức, TP. Hồ Chí Minh
-						<br> Thủ Đức
-						Hồ Chí Minh <br> Việt Nam <br>Email: laptrinhweb.contact@gmail.com<br>
-						﻿Phone: 0397.357.001<br> Facebook: <a href="https://www.facebook.com/nnthienphuc">Thiên
-							Phúc</a><br>
-						Website:<a href="https://www.nnthienphuc.tech/">https://www.nnthienphuc.tech/</a><br>
-					</p>
+						<p>
+								Số 97 Man Thiện, phường Hiệp Phú, Thủ Đức
+							<br>Thành Phố Hồ Chí Minh, Việt Nam
+							<br>Email: <a href="mailto:laptrinhweb.contact@gmail.com" target="_blank">laptrinhweb.contact@gmail.com</a>
+							<br>Phone: 0397357001
+							<br>Facebook:<a href="https://www.facebook.com/nnthienphuc" target="_blank">Thiên Phúc</a>
+							<br>LinkedIn:<a href="https://www.linkedin.com/in/nnthienphuc/" target="_blank">Thiên Phúc</a>
+							<br>Website: <a href="https://www.nnthienphuc.tech/" target="_blank">https://www.nnthienphuc.tech/</a><br>
+						</p>
 				</div>
 				<br>
 				<hr class="soft">

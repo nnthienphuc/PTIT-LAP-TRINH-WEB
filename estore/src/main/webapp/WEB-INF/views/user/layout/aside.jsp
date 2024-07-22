@@ -3,7 +3,7 @@
 		<%@ taglib uri="http://java.sun.com/jstl/fmt_rt" prefix="f" %>
 			<c:set var="cart" value="${sessionScope['scopedTarget.cartService']}" />
 			<div class="panel panel-default">
-				<div class="panel-heading">Shopping Cart</div>
+				<div class="panel-heading">GIỎ HÀNG</div>
 				<div class="panel-body">
 					<img id="cart-img" src="/static/images/ico-cart.png" class="col-sm-5">
 					<ul class="col-sm-7">
@@ -22,16 +22,16 @@
 				<div class="panel-heading">TÌM KIẾM</div>
 				<div class="panel-body">
 					<form action="/product/list-by-keywords/" method="post">
-						<input value="${param.keywords}" name="keywords" class="form-control" placeholder="Keywords">
+						<input value="${param.keywords}" name="keywords" class="form-control" placeholder="Từ khóa cần tìm">
 					</form>
 				</div>
 			</div>
 
 			<div class="panel panel-default">
-				<div class="panel-heading">DANH MỤC</div>
+				<div class="panel-heading">DANH MỤC THỂ LOẠI</div>
 				<div class="list-group">
 					<c:forEach var="c" items="${cates}">
-						<a href="/product/list-by-category/${c.id}" class="list-group-item">${c.nameVN }</a>
+						<a href="/product/list-by-category/${c.id}" class="list-group-item">${c.nameVN}</a>
 					</c:forEach>
 				</div>
 			</div>
@@ -47,10 +47,10 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">ĐẶC BIỆT</div>
 				<div class="list-group">
-					<a href="/product/list-by-special/0" class="list-group-item">New products</a>
-					<a href="/product/list-by-special/1" class="list-group-item">Best seller</a>
-					<a href="/product/list-by-special/2" class="list-group-item">Most popular</a>
-					<a href="/product/list-by-special/3" class="list-group-item">Sale off</a>
+					<a href="/product/list-by-special/0" class="list-group-item">Sản Phẩm Mới</a>
+					<a href="/product/list-by-special/1" class="list-group-item">Sản Phẩm Bán Chạy</a>
+					<a href="/product/list-by-special/2" class="list-group-item">Sản Phẩm Phổ Biến</a>
+					<a href="/product/list-by-special/3" class="list-group-item">Sản Phẩm Đang Giảm Giá</a>
 				</div>
 			</div>
 

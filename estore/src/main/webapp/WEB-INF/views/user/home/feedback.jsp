@@ -18,14 +18,14 @@
 						},
 						messages: {
 							name: {
-								required: 'Vui lòng nhập tên của bạn !'
+								required: 'Vui lòng nhập tên của bạn!'
 							},
 							email: {
-								required: 'Vui lòng nhập địa chỉ email !',
-								email: 'Vui lòng nhập đúng định dạng email !'
+								required: 'Vui lòng nhập địa chỉ email!',
+								email: 'Vui lòng nhập đúng định dạng email!'
 							},
 							info: {
-								required: 'Vui lòng nhập thông tin !'
+								required: 'Vui lòng nhập thông tin!'
 							}
 						}
 					});
@@ -56,12 +56,12 @@
 								cải thiện chất lượng dịch vụ.<br> Vui lòng để lại thông tin
 								cho chúng tôi nếu bạn có bất kỳ góp ý gì.
 							</p>
-							<label class="error">${message }</label>
+							<label class="error">${message}</label>
 							<form action="/home/feedback" method="post" role="form" id="feedback">
 								<div class="form-group">
 									<label>Tên của bạn: </label> <input type="text" class="required"
 										class="form-control border-input" name="name" placeholder="Enter your name"
-										style="width: 530px; height: 25px">
+										style="width: 535px; height: 25px">
 								</div>
 								<div class="form-group">
 									<label>Địa chỉ email: </label> <input type="email" class="required email"
@@ -69,13 +69,14 @@
 										style="width: 530px; height: 25px">
 								</div>
 								<label for="cat">Chủ đề góp ý: </label> <select class="form-control" id="cat"
-									name="comboCate" style="width: 542px; height: 36px">
+									name="comboCate" style="width: 625px; height: 36px">
 									<option value="web">Trang web</option>
 									<option value="service">Chất lượng sản phẩm - dịch vụ</option>
 									<option value="employee">Thái độ phục vụ của nhân viên</option>
 								</select> <br> <label for="info">Nội dung ý kiến: </label>
+								<br>
 								<textarea name="info" class="required" class="form-control" rows="5"
-									style="width: 530px"></textarea>
+									style="width: 625px"></textarea>
 								<br>
 								<button type="submit" class="btn btn-danger btn-large">Gửi</button>
 							</form>

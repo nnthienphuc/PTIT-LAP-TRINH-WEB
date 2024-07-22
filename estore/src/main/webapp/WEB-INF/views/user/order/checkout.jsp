@@ -6,32 +6,33 @@
 
 			<head>
 				<meta charset="utf-8">
-				<title>Insert title here</title>
+				<title>Thanh Toán</title>
 			</head>
 
 			<body>
-				<h2>CHECKOUT</h2>
+				<h2>Thủ Tục Thanh Toán</h2>
 				<table class="table table-hover">
 					<thead>
 						<tr>
-							<th>Name</th>
-							<th>Unit Price</th>
-							<th>Quantity</th>
-							<th>Discount</th>
-							<th>Amount</th>
+							<th>STT</th>
+							<th>Tên Sản Phẩm</th>
+							<th>Đơn Giá</th>
+							<th>Số Lượng</th>
+							<th>Phần Trăm Giảm Giá</th>
+							<th>Tổng Tiền</th>
 						</tr>
 					</thead>
 					<tbody>
-						<c:set var="cart" value="${sessionScope['scopedTarget.cart']}" />
-						<c:forEach var="p" items="${cart.items}">
-							<tr>
-								<td>${p.name}</td>
-								<td>${p.unitPrice}</td>
-								<td>${p.quantity}</td>
-								<td>${p.discount}</td>
-								<td>${p.unitPrice*p.quantity*(1-p.discount)}</td>
-							</tr>
-						</c:forEach>
+						<c:forEach var="p" items="${sessionScope['scopedTarget.cartService'].items}" varStatus ="status">
+					<tr data-id="${p.id}" data-price="${p.unitPrice}" data-discount="${p.discount}">
+						<td>${status.index + 1}</td>
+						<td>${p.name}</td>
+						<td>${p.unitPrice}</td>
+						<td>${p.quantity}</td>
+						<td>${p.discount*100} %</td>
+						<td class="amt">${p.quantity*p.unitPrice*(1-p.discount)}</td>
+					</tr>
+				</c:forEach>
 					</tbody>
 				</table>
 				${message}
@@ -39,39 +40,39 @@
 					<form:hidden path="id" />
 					<div class="row">
 						<div class="form-group col-sm-4">
-							<label>Customer</label>
+							<label>Khách Hàng</label>
 							<form:input path="customer.id" readonly="true" cssClass="form-control" />
 						</div>
 						<div class="form-group col-sm-4">
-							<label>Order Date</label>
+							<label>Ngày Mua</label>
 							<form:input path="orderDate" readonly="true" cssClass="form-control" />
 						</div>
 						<div class="form-group col-sm-4">
-							<label>Require Date</label>
+							<label>Ngày Nhận</label>
 							<form:input path="requireDate" cssClass="form-control" />
 						</div>
 					</div>
 					<div class="row">
 						<div class="form-group col-sm-4">
-							<label>Receiver</label>
+							<label>Người Nhận</label>
 							<form:input path="receiver" cssClass="form-control" />
 						</div>
 						<div class="form-group col-sm-4">
-							<label>Address</label>
+							<label>Địa Chỉ Nhận Hàng</label>
 							<form:input path="address" cssClass="form-control" />
 						</div>
 						<div class="form-group col-sm-4">
-							<label>Amount</label>
+							<label>Tổng Tiền</label>
 							<form:input path="amount" readonly="true" cssClass="form-control" />
 						</div>
 					</div>
 					<div class="row">
 						<div class="form-group col-sm-12">
-							<label>Notes</label>
+							<label>Ghi Chú</label>
 							<form:textarea path="description" cssClass="form-control" rows="5"></form:textarea>
 						</div>
 						<div class="form-group col-sm-12">
-							<button class="btn btn-default">Purchase</button>
+							<button class="btn btn-default">Mua</button>
 						</div>
 					</div>
 				</form:form>

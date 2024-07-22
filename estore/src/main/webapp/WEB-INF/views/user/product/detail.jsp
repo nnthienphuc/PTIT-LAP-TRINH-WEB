@@ -8,35 +8,45 @@
 					</div>
 					<div class="col-sm-7">
 						<ul class="detail-info">
-							<li>Name: ${prod.name}</li>
-							<li>Unit Price:
-								<f:formatNumber value="${prod.unitPrice}" pattern="#,###.0" />VND
+							<li>Tên Sản Phẩm: ${prod.name}</li>
+							<li>Đơn Giá:
+								<f:formatNumber value="${prod.unitPrice}" pattern="#,###.0" />USD
 							</li>
-							<li>UnitBrief: ${prod.unitBrief}</li>
-							<li>Product Date:
+							<li>Đơn Vị: ${prod.unitBrief}</li>
+							<li>Ngày Sản Xuất:
 								<f:formatDate value="${prod.productDate}" pattern="dd-MM-yyyy" />
 							</li>
-							<li>Category: ${prod.category.nameVN}</li>
-							<li>Quantity: ${prod.quantity}</li>
-							<li>Discount:
+							<li>Thể Loại: ${prod.category.nameVN}</li>
+							<li>Số Lượng: ${prod.quantity}</li>
+							<li>Phần Trăm Giảm Giá:
 								<f:formatNumber value="${prod.discount}" type="percent" />
 							</li>
-
-							<li>Available: ${prod.available?'Yes':'No'}</li>
-							<li>Special: ${prod.special?'Yes':'No'}</li>
-							<li>Latest: ${prod.latest?'Yes':'No'}</li>
-							<li>ViewCount: ${prod.views}</li>
-							<li>Description: ${prod.description}</li>
+							<li>Lượt Xem: ${prod.views}</li>
+							<li>Có Sẵn: ${prod.available?'Có':'Không'}</li>
+							<li>Đặc Biệt: ${prod.special?'Có':'Không'}</li>
+							<li>Mới Nhất: ${prod.latest?'Có':'Không'}</li>
+							<li>Mô Tả: ${prod.description}</li>
+							
+							<div data-id="${prod.id}" class="d-flex">
+				              <button class="btn btn-sm btn-danger">
+				                <i class="glyphicon glyphicon-shopping-cart btn-add-to-cart"> </i>
+				              </button>
+				              <button class="btn btn-sm btn-warning btn-star">
+				                <i class="glyphicon glyphicon-star"> </i>
+				              </button>
+				              <button class="btn btn-sm btn-success btn-open-dialog" data-toggle="modal" data-target="#myModal">
+				                <i class="glyphicon glyphicon-envelope"> </i>
+				              </button>
+            				</div>
 						</ul>
 					</div>
+					
 				</div>
 			</div>
-
-			<%-- <div class="text-justify">${prod.description}</div> --%>
 				<ul class="nav nav-tabs">
-					<li class="active"><a data-toggle="tab" href="#tab1">CÙNG LOẠI</a></li>
-					<li><a data-toggle="tab" href="#tab2">YÊU THÍCH</a></li>
-					<li><a data-toggle="tab" href="#tab3">ĐÃ XEM</a></li>
+					<li class="active"><a data-toggle="tab" href="#tab1">Cùng Loại</a></li>
+					<li><a data-toggle="tab" href="#tab2">Yêu Thích</a></li>
+					<li><a data-toggle="tab" href="#tab3">Đã Xem</a></li>
 				</ul>
 
 				<div class="tab-content">

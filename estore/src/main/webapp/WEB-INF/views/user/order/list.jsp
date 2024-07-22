@@ -1,14 +1,14 @@
 <%@ page pageEncoding="UTF-8" %>
 	<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
-		<h2>ORDER LIST</h2>
+		<h2>Danh Sách Đơn Hàng</h2>
 		<table class="table table-hover">
 			<thead>
 				<tr>
-					<th>Id</th>
-					<th>OrderDate</th>
-					<th>Receiver</th>
-					<th>Address</th>
-					<th>Amount</th>
+					<th>Mã Đơn Hàng</th>
+					<th>Ngày Đặt</th>
+					<th>Người Nhận</th>
+					<th>Địa Chỉ Nhận Hàng</th>
+					<th>Tổng Tiền</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -21,7 +21,7 @@
 						<td>${o.amount}</td>
 						<td>
 							<a href="/order/detail/${o.id}" class="btn btn-sm btn-warning">
-								Detail
+								Xem Chi Tiết
 							</a>
 						</td>
 					</tr>
